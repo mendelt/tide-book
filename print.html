@@ -176,8 +176,8 @@ async-std = { version = &quot;1.6.5&quot;, features = [&quot;attributes&quot;] }
 <h1><a class="header" href="#example" id="example">Example</a></h1>
 <p>Create an HTTP server that receives a JSON body, validates it, and responds
 with a confirmation message.</p>
-<pre><pre class="playground"><code class="language-rust edition2018">use tide::Request;
-use tide::prelude::*;
+<pre><pre class="playground"><code class="language-rust edition2018">use tide::prelude::*;
+use tide::Request;
 
 #[derive(Debug, Deserialize)]
 struct Animal {
