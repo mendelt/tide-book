@@ -169,6 +169,8 @@
 <p>Tide is a minimal and pragmatic Rust web application framework built for
 rapid development. It comes with a robust set of features that make building
 async web applications and APIs easier and more fun.</p>
+<p>This Tide-book is still a work in progress, and will be expanded on over time.</p>
+<p>All examples in the text are available as <a href="https://github.com/http-rs/tide-book/tree/main/examples">working Tide-projects</a></p>
 <h1><a class="header" href="#getting-started" id="getting-started">Getting started</a></h1>
 <p>In order to build a web app in Rust you need an HTTP server, and an async
 runtime. After running <code>cargo new --bin web-app</code> add the following lines to your
@@ -404,6 +406,7 @@ struct AppState {
     });
 </code></pre>
 <h3><a class="header" href="#accessing-state" id="accessing-state">Accessing state</a></h3>
+<p>The state can then be accessed using the <code>state</code> method on your <code>Request</code> inside your endpoints;</p>
 <pre><code class="language-rust ignore">async fn read_state(request: Request&lt;AppState&gt;) -&gt; tide::Result {
     Ok(format!(
         &quot;datastore has been updated {} times&quot;,

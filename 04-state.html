@@ -181,6 +181,7 @@ struct AppState {
     });
 </code></pre>
 <h3><a class="header" href="#accessing-state" id="accessing-state">Accessing state</a></h3>
+<p>The state can then be accessed using the <code>state</code> method on your <code>Request</code> inside your endpoints;</p>
 <pre><code class="language-rust ignore">async fn read_state(request: Request&lt;AppState&gt;) -&gt; tide::Result {
     Ok(format!(
         &quot;datastore has been updated {} times&quot;,
